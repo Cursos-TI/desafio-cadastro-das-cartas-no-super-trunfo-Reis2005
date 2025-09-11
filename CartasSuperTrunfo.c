@@ -52,6 +52,26 @@ int main() {
 
     // Exibição dos dados carta 1 
 
+    printf("\n--- dados da carta 1 ---\n");
+    printf("código: %s\n", codigo1);
+    printf("População: %d\n", populacao1);
+    printf("Área: %.2f\n", area1);
+    printf("pib: %.2f\n", pib1);
+    printf("Pontos Turísticos: %d\n", pontos_turisticos1);
+
+    // Exibição dos dados carta 2 
+
+    printf("\n--- Dados da carta 2 ---\n");
+    printf("Código: %s\n", codigo2);
+    printf("População: %d\n", populacao2);
+    printf("Área: %.2f\n", area2);
+    printf("pib: %.2f\n", pib2);
+    printf("Pontos Turísticos: %d\n", pontos_turisticos2);
+
+    return 0;
+    }
+     
+
 
 
 
