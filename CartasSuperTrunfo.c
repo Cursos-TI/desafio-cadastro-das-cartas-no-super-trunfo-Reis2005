@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    // Declaração das variáveis da carta 1 
+    // Carta 1 
     char estado1;
     char codigo1[4];
     char nome_cidade1[50];
@@ -10,13 +10,14 @@ int main() {
     int pontos_turisticos1;
 
 
-    // Declaração das variáveis da carta 2 
+    // Carta 2  
     char estado2;
     char codigo2[4];
     char nome_cidade2[50];
     unsigned long int populacao2;
     float area2, pib2;
     int pontos_turisticos2;
+
 
     // Leitura dos dados da carta 1 
 
@@ -36,6 +37,7 @@ int main() {
     scanf("%d", &pontos_turisticos1);
 
 
+
     // leitura dos dados da carta 2 
 
     printf("\nDigite o estado da carta 2 (ex:B): ");
@@ -52,6 +54,7 @@ int main() {
     scanf("%f", &pib2);
     printf("Digite o número de pontos turísticos da carta 2: ");
     scanf("%d", &pontos_turisticos2);
+
 
 
     // Cálculo dos atributos derivados
@@ -75,6 +78,7 @@ int main() {
     printf("Números de Pontos Turísticos: %d\n", pontos_turisticos1);
     printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
     printf("PIB per Capita: %.2f reais\n", pib_per_capita1);
+    
 
 
     // Exibição dos dados carta 2 
@@ -89,6 +93,19 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
     printf("PIB per capita: %.2f reais\n", pib_per_capita2);
 
+
+    // Comparações 
+
+    printf("\n--- Comparação de Cartas ---\n");
+    printf("População: Carta  1 venceu (%d)\n", populacao1 > populacao2);
+    printf("Área: Carta 1 venceu (%d)\n", area1 > area2);
+    printf("PIB: Carta 1 venceu (%d)\n", pib1 > pib2);
+    printf("Pontos Turísticos: Carta 1 venceu (%d)\n", pontos_turisticos1 > pontos_turisticos2);
+    printf("Densidade Populacional: Carta 1 venceu (%d)\n", densidade1 < densidade2);
+    printf("PIB per Capita: Carta 1 venceu (%d)\n", pib_per_capita1 > pib_per_capita2);
+    printf("Super Poder: Carta 1 venceu (%d)" super_poder1 > super_poder2);
+
+    
     return 0;
  }
      
