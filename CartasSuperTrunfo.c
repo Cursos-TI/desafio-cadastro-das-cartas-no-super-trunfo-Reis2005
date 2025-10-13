@@ -72,19 +72,27 @@ int main() {
 
     
     // -----------------------------
-    // Comparação po PIB per capita 
+    // Menu de Comparações 
     // -----------------------------
 
-    printf("\n--- Comparação das Cartas (Atributo: PIB per capita) --- \n");
+    int opcao;
+    printf("/n--- Menu de Comparação --- \n");
+    printf("Escolha um Atributo para comparar:\n");
+    printf("1 - População\n");
+    printf("2 - Área\n");
+    printf("3 - PIB\n");
+    printf("4 - Pontos Turísticos\n");
+    printf("5 - Densidade Demográfica\n");
+    printf("Digite sua opção: ");
+    scanf("%d", &opcao);
 
-    printf("\nCarta 1 - %s (%c): %.2f reais", nome_cidade1, estado1, pib_per_capita1);
-    printf("\nCarta 2 - %s (%c): %.2f reais", nome_cidade2, estado2, pib_per_capita2);
+    printf("\n Comparando: %s (%c) vs %s (%c)\n", nome_cidade1, estado1, nome_cidade2, estado2);
 
-    if (pib_per_capita1 > pib_per_capita2) {
-        printf("\n\nResultado: Carta 1 (%s) venceu!\n", nome_cidade1);
-    } else if (pib_per_capita2 > pib_per_capita1) {
-        printf("\n\nReultado: Empate!\n");
-    }
+    // ------------------------------
+    // Lógica De Comparação
+    // ------------------------------
+
+    
     
     return 0;
 }
