@@ -91,6 +91,27 @@ int main() {
     // ------------------------------
     // Lógica De Comparação
     // ------------------------------
+    swtich (opcao) {
+
+
+        case 1:
+            printf("População: %lu vs %lu\n", populacao1, populacao2);
+            if (populacao1 > populacao2) {
+                printf("Vencedor: %s\n", nome_cidade1);
+            } else if (populacao2 > populacao1) {
+                printf("Vencedor: %s\n", nome_cidade2);
+            } else {
+                printf("Empate!\n");
+            } 
+            break;
+
+
+
+            case 2:
+
+            
+
+    }
 
     
     
