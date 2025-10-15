@@ -88,35 +88,40 @@ int main() {
 
     printf("\n Comparando: %s (%c) vs %s (%c)\n", nome_cidade1, estado1, nome_cidade2, estado2);
 
+
+
     // ------------------------------
     // Lógica De Comparação
     // ------------------------------
-    swtich (opcao) {
+
+    int opcao;
+    printf("\n--- Menu de Comparação ---\n");
+    printf("Escolha um Atributo para comparar:\n");
+    printf("1 - População\n");
+    printf("2 - Área\n");
+    printf("3 - PIB\n");
+    printf("4 - Pontos Turísticos\n");
+    printf("5 - Densidade Demográfica\n");
+    printf("Digite sua opção: ");
+    scanf("%d", &opcao);
+
+    printf("\nComparando: %s (%c) vs %s (%c)\n", nome_cidade1, estado1, nome_cidade2, estado2);
+
+    
 
 
-        case 1:
-            printf("População: %lu vs %lu\n", populacao1, populacao2);
-            if (populacao1 > populacao2) {
-                printf("Vencedor: %s\n", nome_cidade1);
-            } else if (populacao2 > populacao1) {
-                printf("Vencedor: %s\n", nome_cidade2);
-            } else {
-                printf("Empate!\n");
-            } 
-            break;
+
+
+    
 
 
 
-            case 2:
+
+                    
 
             
 
-    }
 
-    
-    
-    return 0;
-}
 
 
 
@@ -146,7 +151,3 @@ int main() {
 
 
     
-
-
-
-
