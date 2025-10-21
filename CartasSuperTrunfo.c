@@ -73,7 +73,7 @@ int main() {
 
     // Entrada dos dados da carta 2 
     printf("\nDigite o Estado da carta 2 (ex: B): ");
-    scanf(" %c, &estado2");
+    scanf("%c", &estado2);
     printf("Digite o código da carta 2 (ex: B02): ");
     scanf("%s", codigo2);
     printf("Digite  o nome da cidade da carta 2: ");
@@ -89,9 +89,45 @@ int main() {
 
 
 
+    // Cálculos derivados
+    float densidade1 = populacao1 / area1;
+    float densidade2 = populacao2 / area2;
+
+
+    // Menu para escolher os atributos
+    int escolha1, escolha2;
+
+
+    // Primeiro Atributo
+    printf("\n--- Escolha o primeiro atributo para comparar ---\n");
+    printf("1 População\n2 - Área\n3 - PIB\n4 - Pontos Turísticos\n5 - Densidade Demográfica\n");
+    printf("Digite sua opção: ");
+    scanf("%d", &escolha1);
+    while ( escolha1 < 1 || escolha1 > 5) {
+        printf("Opção Inválida. Digite novamente: ");
+        scanf("%d", &escolha1);
+    }
     
-    
+
+
+    // Segundo Atributo
+    printf("\n--- Escolha o segundo atributo para comparar ---\n");
+    for (int i = 1; i <= 5; i++) {
+        if (i != escolha1) {
+            printf("%d - %s\n", i, nomeAtributo(i));
+        }
+    }
+    printf("Digite sua opção: ");
+    scanf("%d", &escolha2);
+    while (escolha2 < 1 || escolha2 > 5 || escolha2 == escolha1) {
+        printf("Opção Inválida ou repetida. Digite novamente: ");
+        scanf("%d", &escolha2);
+    }
+
+
 }
+
+
                         
 
 
