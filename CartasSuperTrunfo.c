@@ -125,6 +125,39 @@ int main() {
     }
 
 
+
+    // Obter valores dos atributos para cada carta 
+    float val_c1_atr1 = pegaValorAtributo(escolha1, 1, populacao1, populacao2, area1, area2, pib1, pib2, pontos_turisticos1, pontos_turisticos2, densidade1, densidade2);
+    float val_c2_atr1 = pegaValorAtributo(escolha1, 2, populacao1, populacao2, area1, area2, pib1, pib2, pontos_turisticos1, pontos_turisticos2, densidade1, densidade2);
+    float val_c1_atr2 = pegaValorAtributo(escolha2, 1, populacao1, populacao2, area1, area2, pib1, pib2, pontos_turisticos1, pontos_turisticos2, densidade1, densidade2);
+    float val_c2_atr2 = pegaValorAtributo(escolha2, 2, populacao1, populacao2, area1, area2, pib1, pib2, pontos_turisticos1, pontos_turisticos2, densidade1, densidade2);
+
+
+
+    // Comparar atributos individualmente 
+    int vencedor_atr1 = vencedorAtributo( val_c1_atr1, val_c2_atr1, escolha1);
+    int vencedor_atr2 = vencedorAtributo( val_c1_atr2, val_c2_atr2, escolha2);
+
+
+
+    // Somar valores dos atributos para cada carta 
+    float soma_carta1 = val_c1_atr1 + val_c1_atr2;
+    float soma_carta2 = val_c2_atr1 + val_c2_atr2;
+
+
+     
+    // Exibir resultados 
+    printf("\n --- Resultado da comparação --- \n");
+    printf(" Comparação entre %s (%c) e %s (%c)\n", nome_cidade1, estado1, nome_cidade2, estado2);
+
+
+
+    // Atributo 1 
+    printf("\nAtributo1: %s\n", nomeAtributo(escolha1));
+    printf("Valores: %.2f vs %.2f\n", val_c1_atr1, val_c2_atr1);
+    if (vencedor_atr1 == 1) printf("Vencedor deste atributo: %s\n", nome_cidade1);
+    else if (vencedor_atr1 == 2) printf("Vencedor deste atributo: %s\n", nome_cidade2);
+    else printf("Empate neste atributo!\n");     
 }
 
 
