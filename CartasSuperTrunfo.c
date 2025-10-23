@@ -157,7 +157,31 @@ int main() {
     printf("Valores: %.2f vs %.2f\n", val_c1_atr1, val_c2_atr1);
     if (vencedor_atr1 == 1) printf("Vencedor deste atributo: %s\n", nome_cidade1);
     else if (vencedor_atr1 == 2) printf("Vencedor deste atributo: %s\n", nome_cidade2);
-    else printf("Empate neste atributo!\n");     
+    else printf("Empate neste atributo!\n"); 
+    
+    
+
+    // Atributo 2 
+    printf("\nAtributo2: %s\n", nomeAtributo(escolha2));
+    printf("Valores: %.2f vs %.2f\n", val_c1_atr2, val_c2_atr2);
+    if (vencedor_atr2 == 1) printf("Vencedor deste atributo: %s\n", nome_cidade1);
+    else if (vencedor_atr2 == 2) printf("Vencedor deste atributo: %s\n", nome_cidade2);
+    else printf("Empate neste atributo!\n");
+
+
+
+    // Soma dos atributos 
+    printf("\nSoma dos atributos: %.2f vs %2f\n", soma_carta1, soma_carta2);
+
+
+
+    // Resultado final 
+    if (soma_carta1 > soma_carta2) printf("Resultado final: Vencedor é %s\n", nome_cidade1);
+    else if (soma_carta2 > soma_carta1) ("Resultado final: Vencedor é %s\n", nome_cidade2);
+    else printf("Resultado final: Empate!\n");
+
+
+    return 0; 
 }
 
 
