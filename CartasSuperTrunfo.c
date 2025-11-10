@@ -62,3 +62,24 @@ void criarCruz(int cruz[HAB][HAB]) {
         }
     }
 }
+
+// função para aplicar a habilidade no tabuleiro 
+void aplicarHabilidade(int tabuleiro[TAM][TAM], int habilidade[HAB][HAB], int origemLinha, int origemColuna) {
+    int meio = HAB / 2; 
+
+    for (int i = 0; i < HAB; i++) {
+        for (int j = 0; j < HAB; j++) {
+            if (habilidade[i][j] == 1) {
+                int linhaTab = origemLinha + (i - meio);
+                int colunaTab = origemColuna + (j - meio); 
+
+                // Garante que está dentro do tabuleiro 
+                if (linhaTab >= 0 && linhaTab < TAM && colunaTab >= 0 && colunaTab < TAM) {
+                    // Marca a área afetada pela habilidade (valor 5) 
+                    if (tabuleiro[linhaTab][colunaTab] == 0) // Não substitui navios
+                        tabuleiro[linhaTab][colunaTab] = 5;
+                }
+            }
+        }
+    }
+}
