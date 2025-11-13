@@ -83,3 +83,36 @@ void aplicarHabilidade(int tabuleiro[TAM][TAM], int habilidade[HAB][HAB], int or
         }
     }
 }
+
+// ====================== PROGRAMA PRINCIPAL ================================
+
+int main () {
+    int tabuleiro [TAM][TAM];
+    int cone[HAB][HAB], cruz[HAB][HAB], octraedo[HAB][HAB];
+
+    inicializarTabuleiro(tabuleiro);
+    posicionarNavios(tabuleiro);
+
+    criarCone(cone);
+    cirarCruz(cruz);
+    criarOctraedo(octraedo);
+
+    // Definir pontos de origem (linha, coluna)
+    int origemConeLinha = 3, origemConeColuna = 3; 
+    int origemCruzLinha = 7, origemCruzColuna = 2;
+    int origemOctraedoLinha = 5, origemOctraedoColuna = 7;
+
+    // Aplicar habilidades no tabuleiro 
+    aplicarHabilidade(tabuleiro, cone, origemConeLinha, origemConeColuna);
+    aplicarHabilidade(tabuleiro, cruz, origemCruzLinha, origemCruzColuna);
+    aplicarHabilidade(tabuleiro, octraedo, origemOctraedoLinha, origemOctraedoColuna);
+
+    // Exibir resultado final 
+    exibirTabuleiro(tabuleiro);
+
+    return 0;
+}
+
+
+
+
